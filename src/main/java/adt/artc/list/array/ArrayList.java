@@ -1,6 +1,8 @@
-package adt.artc.array;
+package adt.artc.list.array;
 
-public class ArrayList<E> extends AbstractArrayList<E> {
+import adt.artc.list.List;
+
+public class ArrayList<E> implements List<E> {
 
     private E[] data;
     private int size;
@@ -26,6 +28,9 @@ public class ArrayList<E> extends AbstractArrayList<E> {
 
     @Override
     public E get(int index) {
+        if (index < 0 || index >= size)
+            throw new IllegalArgumentException("index out of bound : " + index);
+
         return data[index];
     }
 
