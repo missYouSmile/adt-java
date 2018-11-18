@@ -10,7 +10,7 @@ public interface List<E> {
 
     void remove(E e);
 
-    abstract E removeAt(int index);
+    E removeAt(int index);
 
     void add(E e);
 

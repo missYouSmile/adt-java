@@ -75,6 +75,7 @@ public class LinkedList<E> implements List<E> {
         return delNode.val;
     }
 
+    // 链表头添加元素
     @Override
     public void add(E e) {
         dummyHead.next = new Node(e, dummyHead.next);
