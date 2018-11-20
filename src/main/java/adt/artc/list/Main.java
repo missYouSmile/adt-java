@@ -60,9 +60,9 @@ public class Main {
      * my array list options test
      */
     private static void arrayListTest() {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>(5);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 7; i++) {
             list.add(i);
             System.out.println(list);
         }
@@ -75,13 +75,7 @@ public class Main {
         System.out.println(list);
         list.removeAt(3);
         System.out.println(list);
-        list.removeAt(3);
-        System.out.println(list);
-        list.removeAt(3);
-        System.out.println(list);
-        list.removeAt(3);
-        System.out.println(list);
-        list.removeAt(3);
+        list.removeAt(0);
         System.out.println(list);
         list.removeAt(0);
         System.out.println(list);
@@ -89,6 +83,12 @@ public class Main {
         System.out.println(list);
         list.removeAt(0);
         System.out.println(list);
+
+        for (int i = 0; i < 7; i++) {
+            list.add(i);
+            System.out.println(list);
+        }
+
     }
 
 }

@@ -12,6 +12,10 @@ public class LoopQueue<E> implements Queue<E> {
     }
 
     public LoopQueue(int capacity) {
+
+        if (capacity <= 0)
+            throw new IllegalArgumentException("capacity must be > 0");
+
         data = (E[]) new Object[capacity + 1];
         front = tail = 0;
     }
@@ -64,6 +68,10 @@ public class LoopQueue<E> implements Queue<E> {
         }
 
         int newCapacity = capacity() >> 1;
+
+        if (newCapacity == 0)
+            return;
+
         E[] newData = (E[]) new Object[newCapacity + 1];
         int index = 0;
         for (int i = front; i % data.length != tail; i++) {

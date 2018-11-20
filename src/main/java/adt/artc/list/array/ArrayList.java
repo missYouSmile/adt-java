@@ -12,6 +12,9 @@ public class ArrayList<E> implements List<E> {
     }
 
     public ArrayList(int capacity) {
+        if (capacity <= 0)
+            throw new IllegalArgumentException("capacity must be > 0");
+
         data = (E[]) new Object[capacity];
         size = 0;
     }
