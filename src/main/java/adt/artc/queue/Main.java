@@ -20,6 +20,10 @@ public class Main {
         take = loopQueue.take();
         System.out.println(loopQueue + " -------- take :" + take);
 
+        for (int i = 0; i < 9; i++) {
+            loopQueue.offer(i + 1);
+            System.out.println(loopQueue);
+        }
         System.out.println(loopQueue);
     }
 

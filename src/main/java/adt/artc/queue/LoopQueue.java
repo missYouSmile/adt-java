@@ -95,6 +95,10 @@ public class LoopQueue<E> implements Queue<E> {
      */
     private void growIfNecessary() {
 
+        if (capacity() == 0) {
+            data = (E[]) new Object[8 + 1];
+        }
+
         if (index(tail + 1) != front) {
             return;
         }
