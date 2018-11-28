@@ -29,6 +29,12 @@ public class ArrayList<E> implements List<E> {
         return size == 0;
     }
 
+    public void set(int index, E e) {
+        if (index < 0 || index >= size)
+            throw new IllegalArgumentException("index out of bound : " + index);
+        data[index] = e;
+    }
+
     @Override
     public E get(int index) {
         if (index < 0 || index >= size)
